@@ -1,0 +1,6 @@
+{
+    "prettier.useTabs": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.indentHandlebars": true,
+    "editor.insertSpaces": true
+}
