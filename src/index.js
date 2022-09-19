@@ -10,16 +10,18 @@ const image = "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/i
 function BookList() {
 	return (
 		<section className="booklist">
-			<Book />
+			<Book title={title} />
+			<Book title="over written title" />
 		</section>
 	);
 }
 
-const Book = () => {
+const Book = (data) => {
+	console.log(data);
 	return <article className="book">
 		<img src={image} alt="" />
-		<h4>{author}</h4>
-		<h2>{title}</h2>
+		<h4>{ author }</h4>
+		<h2>{ data.title }</h2>
 	</article>
 }
 
