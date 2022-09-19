@@ -18,19 +18,13 @@ function BookList() {
 }
 
 const Book = () => {
+	const title = "some title goes here"
 	return <article className="book">
-		<Title />
-		<Image />
-		<Author />
+		<img src="https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/81abeGoTMsL._AC_UL600_SR600,400_.jpg" alt="best seller picture" />
+		<h4>Joshua Hassan</h4>
+		<h2>{title}</h2>
+		<h4>Some content yeah</h4>
 	</article>
 }
 
-const Image = () => {
-	return <img src="https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/81abeGoTMsL._AC_UL600_SR600,400_.jpg" alt="best seller picture" />
-}
-
-const Author = () => <h5>Author here</h5>;
-const Title = () => <h2>Some TItle</h2>
-
 ReactDOM.render(<BookList />, document.getElementById('root'));
-
