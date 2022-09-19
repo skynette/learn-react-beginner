@@ -6,12 +6,13 @@ import './index.css';
 const author = "Joshua Hassan The First"
 const title = "some title goes here"
 const image = "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/I/81abeGoTMsL._AC_UL600_SR600,400_.jpg"
+const image_2 = "https://images-na.ssl-images-amazon.com/images/I/81HE+JDes-L._AC_UL600_SR600,400_.jpg"
 
 function BookList() {
 	return (
 		<section className="booklist">
-			<Book title={title} />
-			<Book title="over written title" />
+			<Book author={ author } title={ title } image={ image } />
+			<Book author={ author } title="over written title" image={ image_2 } />
 		</section>
 	);
 }
@@ -19,8 +20,8 @@ function BookList() {
 const Book = (data) => {
 	console.log(data);
 	return <article className="book">
-		<img src={image} alt="" />
-		<h4>{ author }</h4>
+		<img src={ data.image } alt="" />
+		<h4>{ data.author }</h4>
 		<h2>{ data.title }</h2>
 	</article>
 }
