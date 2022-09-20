@@ -22,7 +22,6 @@ function BookList() {
 	return (
 		<section className="booklist">
 			{ books.map((book)=>{
-				// const { image, title, author } = book;
 				return (
 					<Book key={book.id} {...book}></Book>
 				)
@@ -32,10 +31,16 @@ function BookList() {
 }
 
 const Book = (props) => {
+	// attribute, then event Handler
+	// onCLick and onMouseOver
+	const clickHandler = () => {
+		alert("Hello world");
+	}
 	return <article className="book">
 		<img src={ props.image } alt="" />
 		<h2>{ props.title }</h2>
 		<h4>{ props.author }</h4>
+		<button type="button" onClick={clickHandler}>Click me yay</button>
 	</article>
 }
 
