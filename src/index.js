@@ -53,7 +53,9 @@ const Book = (props) => {
 	const clickHandler = () => {
 		alert("Hello world");
 	}
-	return <article className="book">
+	return <article className="book" onMouseOver={()=>{
+		console.log("mouse is over the book")
+	}}>
 		<img src={ props.img } alt="" />
 		<h2>{ props.title }</h2>
 		<h4>{ props.author }</h4>
